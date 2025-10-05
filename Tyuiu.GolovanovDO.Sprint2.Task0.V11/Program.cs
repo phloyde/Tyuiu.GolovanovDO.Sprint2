@@ -21,20 +21,21 @@ internal class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 
         int x = 8105;
-        int y = 275; 
-        
+        int y = 275;
+
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Результат :                                                             *");
 
 
-        var res = ds.GetCompareOperations(x, y);
-        Console.Write(res[0] + ", ");
-        Console.Write(res[1] + ", ");
-        Console.Write(res[2] + ", ");
-        Console.Write(res[3] + ", ");
-        Console.Write(res[4] + ", ");
-        Console.Write(res[5] + ", ");
+        bool[] res = new bool[6];
+        res = ds.GetCompareOperations(x, y);
+
+        for (int i = 0; i < 6; i++)
+        {
+            Console.WriteLine(res[i]);
+        }
+
         Console.ReadKey();
 
     }

@@ -23,7 +23,7 @@ internal class Program
         int a = 247;
         int b = 155;
         int c = 325;
-        int d = 875;
+        int d = 857 ;
         Console.WriteLine("a = 247");
         Console.WriteLine("b = 155");
         Console.WriteLine("c = 325");

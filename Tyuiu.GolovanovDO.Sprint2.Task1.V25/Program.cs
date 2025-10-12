@@ -4,7 +4,7 @@ internal class Program
     private static void Main(string[] args)
     {
         DataService ds = new DataService();
-        Console.Title = "Спринт #1| Выполнил: Голованов Д.О. | ПИНб-25-1";
+        Console.Title = "Спринт #2| Выполнил: Голованов Д.О. | ПИНб-25-1";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #2                                                               *");
         Console.WriteLine("* Тема: операции сравнения                                                *");

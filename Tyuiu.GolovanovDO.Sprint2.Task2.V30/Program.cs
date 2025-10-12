@@ -1,10 +1,10 @@
-﻿using Tyuiu.GolovanovDO.Sprint2.Task0.V11.Lib;
+﻿using Tyuiu.GolovanovDO.Sprint2.Task2.V30.Lib;
 internal class Program
 {
     private static void Main(string[] args)
     {
         DataService ds = new DataService();
-        Console.Title = "Спринт #2| Выполнил: Голованов Д.О. | ПИНб-25-1";
+   
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #2                                                               *");
         Console.WriteLine("* Тема: операции сравнения                                                *");
@@ -13,30 +13,34 @@ internal class Program
         Console.WriteLine("* Выполнил Голованов Данила Олегович | ПИНб-25-1                          *");
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
-        Console.WriteLine("* Написать программу из операций сравнения и арифметических выражений,    *");
-        Console.WriteLine("* которая вернет логическую последовательность(массив):                   *");
-        Console.WriteLine("* true, false, true, false, true, false, при х = 8105 и у = 275           *");
+        Console.WriteLine("* Написать программу на, которая запрашивает целые значения с клавиатуры  *");
+        Console.WriteLine("* и вычисляет находится ли точка с координатами X,Y                       *");
+        Console.WriteLine("* в заштрихованной области.                                               *");
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 
-        int x = 8105;
-        int y = 275;
+        int x;
+        Console.WriteLine("Введите значение Х:");
+        x = Convert.ToInt32(Console.ReadLine());
+
+        int y;
+        Console.WriteLine("Введите значение Y:");
+        y = Convert.ToInt32(Console.ReadLine());
 
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Результат :                                                             *");
 
-
-        bool[] res = new bool[6];
-        res = ds.GetCompareOperations(x, y);
-
-        for (int i = 0; i < 6; i++)
+        bool res = ds.CheckDotInShadedArea(x, y);
+        if (res == true)
         {
-            Console.WriteLine(res[i]);
+            Console.WriteLine("Точка входит в закрашенную область");
         }
-
+        else
+        {
+            Console.WriteLine("Точка не входит в закрашенную область");
+        }
         Console.ReadKey();
-
     }
 }

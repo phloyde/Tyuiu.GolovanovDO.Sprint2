@@ -8,12 +8,12 @@ namespace Tyuiu.GolovanovDO.Sprint2.Task4.V14.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            double x = 5;
-            double y = 3;
+            double x = -2;
+            double y = 4;
             double res = ds.Calculate(x, y);
 
 
-            Assert.AreEqual(8.490, res);
+            Assert.AreEqual(25.629, res);
         }
     }
 }

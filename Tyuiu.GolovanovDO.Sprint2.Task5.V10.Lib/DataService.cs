@@ -85,13 +85,43 @@ namespace Tyuiu.GolovanovDO.Sprint2.Task5.V10.Lib
                 n = n - 1;
             }
 
+            if (n < 10 && m < 10)
+            {
+                string res = ($"0{n}.0{m}.{g}");
+                return res;
+            }
+            else
+            {
+                string res = ($"{n}.0{m}.{g}");
+                return res;
+            }
+
+            if (n < 10)
+            {
+                string res = ($"0{n}.{m}.{g}");
+                return res;
+            }
+            else
+            {
+                string res = ($"{n}.0{m}.{g}");
+                return res;
+            }
+
+            if (m < 10)
+            {
+                string res = ($"{n}.0{m}.{g}");
+                return res;
+            }
+            else
+            {
+                string res = ($"{n}.0{m}.{g}");
+                return res;
+            }
 
 
-            
-            string res = ($"{n}.{m}.{g}");
-            return res;
 
-          
+
+
 
         }
     }

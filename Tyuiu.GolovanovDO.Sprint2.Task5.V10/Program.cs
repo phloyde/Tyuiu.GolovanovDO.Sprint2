@@ -14,7 +14,7 @@ internal class Program
 
         DataService ds = new DataService();
 
-        Console.WriteLine("Предыдущий день это: " + ds.FindDateOfPreviousDay(g, m, n) + " Года");
+        Console.WriteLine("Предыдущий день это: " + ds.FindDateOfPreviousDay(g, m, n));
         Console.ReadKey();
     }
 }

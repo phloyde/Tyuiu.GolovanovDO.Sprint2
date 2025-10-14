@@ -30,126 +30,40 @@ namespace Tyuiu.GolovanovDO.Sprint2.Task6.V9.Lib
             {
                 n = n + 1;
             }
-           
-                string month;
-            switch (m)
+
+            if (m < 10 || n < 10)
             {
-                case 1:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Январь");
-                    }
-                    else
-                    {
-                        return ($"{n} Январь");
-                    }
-
-
-                case 2:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Февраль");
-                    }
-                    else
-                    {
-                        return ($"{n} Февраль");
-                    }
-                case 3:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Март");
-                    }
-                    else
-                    {
-                        return ($"{n} Март");
-                    }
-                case 4:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Апрель");
-                    }
-                    else
-                    {
-                        return ($"{n} Апрель");
-                    }
-                case 5:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Май");
-                    }
-                    else
-                    {
-                        return ($"{n} Май");
-                    }
-                case 6:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Июнь");
-                    }
-                    else
-                    {
-                        return ($"{n} Июнь");
-                    }
-                case 7:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Июль");
-                    }
-                    else
-                    {
-                        return ($"{n} Июль");
-                    }
-                case 8:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Август");
-                    }
-                    else
-                    {
-                        return ($"{n} Август");
-                    }
-                case 9:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Сентябрь");
-                    }
-                    else
-                    {
-                        return ($"{n} Сентябрь");
-                    }
-                case 10:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Октябрь");
-                    }
-                    else
-                    {
-                        return ($"{n} Октябрь");
-                    }
-                case 11:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Ноябрь");
-                    }
-                    else
-                    {
-                        return ($"{n} Ноябрь");
-                    }
-                case 12:
-                    if (n < 10)
-                    {
-                        return ($"0{n} Декабрь");
-                    }
-                    else
-                    {
-                        return ($"{n} Декабрь");
-                    }
-                default: throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {m}");
+                if (m < 10 && n > 9)
+                {
+                    string res = ($"{n}.0{m}");
+                    return res;
+                }
+                else if (m > 9 && n < 10)
+                {
+                    string res = ($"0{n}.{m}");
+                    return res;
+                }
+                else if (m < 10 && n < 10)
+                {
+                    string res = ($"0{n}.0{m}");
+                    return res;
+                }
+                else
+                {
+                    // Этот случай теоретически невозможен, но компилятор требует return
+                    string res = ($"{n}.{m}");
+                    return res;
+                }
+            }
+            else
+            {
+                string res = ($"{n}.{m}");
+                return res;
             }
 
-            
 
-            
+
+
         }
 
     }

@@ -13,7 +13,7 @@ namespace Tyuiu.GolovanovDO.Sprint2.Task6.V9.Test
             int n = 24;
 
             var res = ds.FindDateOfNextDay(m, n);
-            string wait = ("25 Март");
+            string wait = ("25.03");
 
             Assert.AreEqual(wait, res);
 
